@@ -12,6 +12,7 @@
 		CA5C3FAC2BB8638700647ECF /* MyDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C3FAB2BB8638700647ECF /* MyDayView.swift */; };
 		CA5C3FAE2BB8676100647ECF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5C3FAD2BB8676100647ECF /* Color.xcassets */; };
 		CA5C3FB12BB8746E00647ECF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C3FB02BB8746E00647ECF /* Event.swift */; };
+		CA5C3FB42BB961AE00647ECF /* iOSCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C3FB32BB961AE00647ECF /* iOSCheckboxToggleStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CA5C3FAB2BB8638700647ECF /* MyDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayView.swift; sourceTree = "<group>"; };
 		CA5C3FAD2BB8676100647ECF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		CA5C3FB02BB8746E00647ECF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CA5C3FB32BB961AE00647ECF /* iOSCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCheckboxToggleStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		CA5C3F8F2BB860ED00647ECF /* MyDay */ = {
 			isa = PBXGroup;
 			children = (
+				CA5C3FB22BB9619D00647ECF /* Styles */,
 				CA5C3F902BB860ED00647ECF /* AppDelegate.swift */,
 				CA5C3F9B2BB860EE00647ECF /* Assets.xcassets */,
 				CA5C3FA02BB860EE00647ECF /* Info.plist */,
@@ -78,6 +81,14 @@
 				CA5C3FB02BB8746E00647ECF /* Event.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CA5C3FB22BB9619D00647ECF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				CA5C3FB32BB961AE00647ECF /* iOSCheckboxToggleStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5C3FB42BB961AE00647ECF /* iOSCheckboxToggleStyle.swift in Sources */,
 				CA5C3F912BB860ED00647ECF /* AppDelegate.swift in Sources */,
 				CA5C3FB12BB8746E00647ECF /* Event.swift in Sources */,
 				CA5C3FAC2BB8638700647ECF /* MyDayView.swift in Sources */,

@@ -7,26 +7,37 @@
 
 import Foundation
 
-struct Event: Codable {
+struct Event: Identifiable, Codable {
+    
+    var id: String {
+        title + startTime.formatted()
+    }
     
     let title: String
     let durationInMinutes: Int
     let startTime: Date
+    let exactTime: Bool
     let description: String
     let icon: String
     let isDone: Bool
     
     var duration: String {
-        return  ""
+        if durationInMinutes / 60 < 1 {
+            return "\(durationInMinutes)min"
+        }
+        return "\(durationInMinutes / 60)h"
     }
     
-    static let mock: Self = Event(
-        title: "title",
-        durationInMinutes: 30,
-        startTime: .now,
-        description: "description",
-        icon: "perspective",
-        isDone: false
-    )
+    static func mock(title: String = "title") -> Self {
+        Event(
+            title: title,
+            durationInMinutes: 30,
+            startTime: .now,
+            exactTime: false,
+            description: "description",
+            icon: "perspective",
+            isDone: false
+        )
+    }
     
 }
