@@ -9,6 +9,18 @@ import SwiftUI
 
 struct MyDayView: View {
     
+    // MARK: - Properties
+    
+    @State private var events: [Event] = [
+        Event.mock(title: "title1"),
+        Event.mock(title: "title2"),
+        Event.mock(title: "title3"),
+        Event.mock(title: "title4"),
+        Event.mock(title: "title5"),
+        Event.mock(title: "title6"),
+        Event.mock(title: "title7")
+    ]
+    
     // MARK: - Body
     
     var body: some View {
@@ -22,18 +34,16 @@ struct MyDayView: View {
                     .padding(.horizontal)
                 
                 List {
-                    eventCard(.mock())
-                    eventCard(.mock())
-                    eventCard(.mock())
-                    eventCard(.mock())
-                    eventCard(.mock())
-                    eventCard(.mock())
-                    eventCard(.mock())
-                        .padding(.bottom, 48)
-
+                    ForEach(events) { event in
+                        eventCard(event)
+                            .padding(.bottom, events.last == event ? 48 : 0)
+                            .padding(.top, events.first == event ? 16 : 0)
+                            .padding(.horizontal)
+                    }
+                    .onMove(perform: move)
                 }
-                .padding(.horizontal)
                 .listStyle(.plain)
+                .listRowSpacing(16)
                 .scrollIndicators(.hidden)
                 .frame(maxHeight: .infinity)
                 .clipShape(RoundedRectangle(cornerRadius: 26))
@@ -138,8 +148,18 @@ private extension MyDayView {
                 .foregroundStyle(.white)
         }
         .listRowSeparator(.hidden)
-        .listRowInsets(.init(top: 16, leading: 0, bottom: 0, trailing: 0))
-        .listRowBackground(Color.lightGreen)
+        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+        .listRowBackground(Color.clear)
+    }
+    
+}
+
+// MARK: - Private
+
+private extension MyDayView {
+    
+    func move(from source: IndexSet, to destination: Int) {
+        events.move(fromOffsets: source, toOffset: destination)
     }
     
 }

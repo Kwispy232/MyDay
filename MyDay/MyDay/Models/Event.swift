@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Event: Identifiable, Codable {
+struct Event: Identifiable, Codable, Equatable {
     
     var id: String {
         title + startTime.formatted()
