@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA4E34862BC87B8900A168FF /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E34852BC87B8900A168FF /* EventCard.swift */; };
 		CA5C3F912BB860ED00647ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C3F902BB860ED00647ECF /* AppDelegate.swift */; };
 		CA5C3F9C2BB860EE00647ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5C3F9B2BB860EE00647ECF /* Assets.xcassets */; };
 		CA5C3FAC2BB8638700647ECF /* MyDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C3FAB2BB8638700647ECF /* MyDayView.swift */; };
 		CA5C3FAE2BB8676100647ECF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5C3FAD2BB8676100647ECF /* Color.xcassets */; };
 		CA5C3FB12BB8746E00647ECF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C3FB02BB8746E00647ECF /* Event.swift */; };
 		CA5C3FB42BB961AE00647ECF /* iOSCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C3FB32BB961AE00647ECF /* iOSCheckboxToggleStyle.swift */; };
+		CACE7C4D2BBB1E080073ECE7 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = CACE7C4C2BBB1E080073ECE7 /* RxBlocking */; };
+		CACE7C4F2BBB1E080073ECE7 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CACE7C4E2BBB1E080073ECE7 /* RxBlocking-Dynamic */; };
+		CACE7C512BBB1E080073ECE7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CACE7C502BBB1E080073ECE7 /* RxCocoa */; };
+		CACE7C532BBB1E080073ECE7 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CACE7C522BBB1E080073ECE7 /* RxCocoa-Dynamic */; };
+		CACE7C552BBB1E080073ECE7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = CACE7C542BBB1E080073ECE7 /* RxRelay */; };
+		CACE7C572BBB1E360073ECE7 /* MyDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE7C562BBB1E360073ECE7 /* MyDayViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA4E34852BC87B8900A168FF /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		CA5C3F8D2BB860ED00647ECF /* MyDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5C3F902BB860ED00647ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA5C3F9B2BB860EE00647ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +32,7 @@
 		CA5C3FAD2BB8676100647ECF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		CA5C3FB02BB8746E00647ECF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CA5C3FB32BB961AE00647ECF /* iOSCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		CACE7C562BBB1E360073ECE7 /* MyDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +40,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACE7C552BBB1E080073ECE7 /* RxRelay in Frameworks */,
+				CACE7C532BBB1E080073ECE7 /* RxCocoa-Dynamic in Frameworks */,
+				CACE7C512BBB1E080073ECE7 /* RxCocoa in Frameworks */,
+				CACE7C4D2BBB1E080073ECE7 /* RxBlocking in Frameworks */,
+				CACE7C4F2BBB1E080073ECE7 /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA4E34822BC87B5F00A168FF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA4E34852BC87B8900A168FF /* EventCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CA5C3F842BB860ED00647ECF = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +78,7 @@
 		CA5C3F8F2BB860ED00647ECF /* MyDay */ = {
 			isa = PBXGroup;
 			children = (
+				CA4E34822BC87B5F00A168FF /* Components */,
 				CA5C3FB22BB9619D00647ECF /* Styles */,
 				CA5C3F902BB860ED00647ECF /* AppDelegate.swift */,
 				CA5C3F9B2BB860EE00647ECF /* Assets.xcassets */,
@@ -71,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				CA5C3FAB2BB8638700647ECF /* MyDayView.swift */,
+				CACE7C562BBB1E360073ECE7 /* MyDayViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -107,6 +131,13 @@
 			dependencies = (
 			);
 			name = MyDay;
+			packageProductDependencies = (
+				CACE7C4C2BBB1E080073ECE7 /* RxBlocking */,
+				CACE7C4E2BBB1E080073ECE7 /* RxBlocking-Dynamic */,
+				CACE7C502BBB1E080073ECE7 /* RxCocoa */,
+				CACE7C522BBB1E080073ECE7 /* RxCocoa-Dynamic */,
+				CACE7C542BBB1E080073ECE7 /* RxRelay */,
+			);
 			productName = MyDay;
 			productReference = CA5C3F8D2BB860ED00647ECF /* MyDay.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +166,9 @@
 				Base,
 			);
 			mainGroup = CA5C3F842BB860ED00647ECF;
+			packageReferences = (
+				CACE7C4B2BBB1E080073ECE7 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = CA5C3F8E2BB860ED00647ECF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,6 +198,8 @@
 				CA5C3FB42BB961AE00647ECF /* iOSCheckboxToggleStyle.swift in Sources */,
 				CA5C3F912BB860ED00647ECF /* AppDelegate.swift in Sources */,
 				CA5C3FB12BB8746E00647ECF /* Event.swift in Sources */,
+				CACE7C572BBB1E360073ECE7 /* MyDayViewModel.swift in Sources */,
+				CA4E34862BC87B8900A168FF /* EventCard.swift in Sources */,
 				CA5C3FAC2BB8638700647ECF /* MyDayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +406,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CACE7C4B2BBB1E080073ECE7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CACE7C4C2BBB1E080073ECE7 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACE7C4B2BBB1E080073ECE7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		CACE7C4E2BBB1E080073ECE7 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACE7C4B2BBB1E080073ECE7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		CACE7C502BBB1E080073ECE7 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACE7C4B2BBB1E080073ECE7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CACE7C522BBB1E080073ECE7 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACE7C4B2BBB1E080073ECE7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		CACE7C542BBB1E080073ECE7 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CACE7C4B2BBB1E080073ECE7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA5C3F852BB860ED00647ECF /* Project object */;
 }
